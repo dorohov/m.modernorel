@@ -1,0 +1,121 @@
+.prices-page-content{
+	padding-bottom: 0;
+}
+._ppc__block{
+	margin-bottom: 20px;
+}
+._ppc__table{	
+	margin-top: 24px;
+	margin-left: -20px;
+	margin-right: -20px;
+	border: 0;
+	a{
+		text-decoration: none!important;
+	}
+	._ppc__table__heading{
+		td{
+			background: @scarlet!important;
+			color: @white;
+			padding-top: 15px;
+			padding-bottom: 15px;
+			font-family: @helv-bold;
+		}
+	}
+	tr{
+		&:nth-child(3n+1){
+			td, th{
+				background: #ffebe4;
+			}
+		}
+		&:nth-child(3n+2){
+			td, th{
+				background: #fce9db;
+			}
+		}
+		&:nth-child(3n+3){
+			td, th{
+				background: #fffbf7;
+			}
+		}
+		&:last-child{
+			td, th{
+				&[colspan="2"]{
+					background: @scarlet;
+					span{
+						color: @white!important;
+						text-transform: uppercase;
+						font-family: @helv-bold!important;
+					}
+				}
+			}
+		}
+		td, th{
+			vertical-align: middle;
+			border: 0;
+			padding-top: 20px;
+			padding-bottom: 20px;
+			font-size: 14px;
+			line-height: 19px;
+			&:first-child{
+				padding-left: 20px;
+				padding-right: 10px;
+				width: 66%;
+			}
+			&:last-child{
+				padding-left: 10px;
+				padding-right: 20px;
+				width: 34%;
+				font-family: @helv-bold;
+				font-size: 13px;
+			}
+			&[colspan="2"]{
+				background: #cfa295;
+				color: @white;
+				padding: 20px;
+				text-transform: uppercase;
+				font-family: @helv-bold;
+				span{
+					width: 12px!important;
+					text-transform: none;
+					font-family: @helv;
+				}
+			}
+		}
+	}
+	&.bg-none{
+		margin: 0 -25px 0 -30px;
+		tr{
+			td, th{
+				padding: 13px 25px 13px 30px; 
+				&:first-child{
+					padding-right: 10px;
+					width: 57%;
+					@media @media-size-xs-l{width: 70%;}
+				}
+				&:last-child{
+					padding-left: 10px;
+					width: 43%;
+					font-size: 12px;
+					@media @media-size-xs-l{width: 30%;}
+				}
+			}
+
+			&:nth-child(2n+1){
+				td, th{					
+					background: none;
+				}
+			}
+			&:nth-child(2n+2){
+				td, th{
+					background: #ffead6;
+				}
+			}
+		}
+	}
+}
+._ppc__table + .text-block{
+	margin-top: 20px;
+}
+._ppc__controls{
+	float: right;
+}

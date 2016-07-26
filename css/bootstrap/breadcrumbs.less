@@ -1,0 +1,35 @@
+//
+// Breadcrumbs
+// --------------------------------------------------
+._cb__breadcrumb{
+	list-style: none;
+	font-size: 12px;
+	line-height: 16px;
+	margin-bottom: 5px;
+	color: @breadcrumb-color;
+	margin-left: 0;
+	li{
+		display: inline-block;
+		margin-bottom: 5px;
+		& + li{
+		  &:before{
+			font-family: @icon;
+			content: @icon-next;
+			display: inline-block;
+			margin: 0 10px 0 7px;
+			vertical-align: middle;
+			font-size: 6px;
+		  }
+		}
+		&.is-active{
+		  color: @breadcrumb-active-color;
+		}
+	}
+	a{
+		color: @breadcrumb-color;
+		text-decoration: underline;
+		&:hover{
+			text-decoration: none;
+		}
+	}
+}

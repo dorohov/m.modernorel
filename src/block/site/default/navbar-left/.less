@@ -1,0 +1,124 @@
+/* ._cb__navbar-left{
+	margin-bottom: 25px;
+	@media @media-size-xs{margin-bottom: 5px;}
+	@media @media-screen{
+		border: 1px solid @b-line;
+	}
+	._nl__header-block{
+		@media @media-device{
+			display: flex;
+			align-items: center;
+		}
+		@media @media-screen{
+			display: none;
+		}
+	}
+	._nl__hamburger{
+		margin: 0 25px 0 0;
+    	width: 40px;
+    	span{
+    		left: 0;
+    		right: 0;
+    		background: lighten(@black, 30%);
+    		&:before, &:after{
+    			background: lighten(@black, 30%);
+    		}
+    	}
+    	@media @media-size-xs{
+    		width: 30px;
+    	}
+	}
+	._nl__heading{
+		text-transform: uppercase;
+		color: lighten(@black, 30%);
+		font-size: 16px;
+		letter-spacing: .5px;
+		font-family: @roboto-cond-bold;	
+	}
+	._nl__collapse{
+		@media @media-screen{
+			display: block;
+		}
+
+	}
+	._nl__panel{
+		list-style: none;
+		padding: 15px 0;
+		margin: 0;
+	}
+	._nl__panel-collapse{
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		._nl__item{
+	        padding: 7px 25px 6px 35px;
+    		margin-bottom: 7px;
+		}
+	}
+	._nl__panel-item{
+		padding: 0;
+		margin: 0;
+		border: none; 
+		box-shadow: none;
+	}
+	._nl__item{
+		display: block;
+		font-size: 14px;
+		line-height: 18px;
+		text-decoration: none;
+		color: lighten(@black, 12.5%);
+		border-left: 4px solid fadeout(#81bce4, 100%);
+		margin-left: -3px;
+		padding: 14px 25px;
+		transition: @transition-site;
+		&.is-active{
+			border-left-color: fadeout(#81bce4, 0%);
+			background: #f2f8fc;
+			color: @black;
+		}
+		&:hover{
+			border-left-color: fadeout(#81bce4, 0%);			
+		}
+		@media @media-size-xs{
+			font-size: 13px;
+			line-height: 16px;
+			padding: 10px 25px;
+
+		}
+	}
+	._nl__item-collapse{
+		position: relative;
+		display: block;
+		font-size: 14px;
+		line-height: 18px;
+		text-decoration: none;
+		color: lighten(@black, 12.5%);
+		padding: 12px 35px 12px 25px;
+		transition: @transition-site;
+		&:after{
+			transition: @transition-site;
+			font-family: @icon;
+			position: absolute;
+			top: 50%;
+			right: 17px;
+			transform: translateY(-50%);
+			font-size: 10px;
+			color: #9ab2c5;
+		}
+		&[aria-expanded="false"]{
+			&:after{
+				content: @icon-arrow-next;
+			}
+		}
+		&[aria-expanded="true"]{
+			color: @turquoise;
+			&:after{
+				content: @icon-arrow-down;	
+				color: @turquoise;			
+			}
+		}
+		&:hover{
+			color: #81bce4;
+		}
+	}
+} */

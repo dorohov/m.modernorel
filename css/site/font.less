@@ -1,0 +1,44 @@
+@helv: 			helveticaneuecyr-roman-webfont;
+@helv-bold: 	helveticaneuecyr-bold-webfont;
+@din: 			pfdintextcomppro-regular;
+@din-med: 		pfdintextcomppro-medium;
+
+@icon: 				Flaticon;
+.include-custom-font(@family: @muller, @weight: normal, @style: normal){
+	@font-face{			
+		font-family: "@{family}";			
+		src:url('@{url-path-fonts}/@{family}.eot');
+		src:url('@{url-path-fonts}/@{family}.eot?#iefix') format('embedded-opentype'),
+			url('@{url-path-fonts}/@{family}.woff') format('woff'),
+			url('@{url-path-fonts}/@{family}.ttf') format('truetype'),
+			url('@{url-path-fonts}/@{family}.svg#icon') format('svg');
+		font-weight: @weight;
+		font-style: @style;		
+	}
+}
+/*helvetica*/
+.include-custom-font(@family: @helv, 			@weight: normal, @style: normal);
+.include-custom-font(@family: @helv-bold, 		@weight: normal, @style: normal);
+/*end's helvetica*/
+/*din*/
+.include-custom-font(@family: @din, 			@weight: normal, @style: normal);
+.include-custom-font(@family: @din-med, 		@weight: normal, @style: normal);
+/*end's din*/
+
+.include-custom-font(@family: @icon, 			@weight: normal, @style: normal);
+
+
+@icon-bars: 	"\f100";
+@icon-close: 	"\f101";
+@icon-expand: 	"\f102";
+@icon-fb: 		"\f103";
+@icon-igm: 		"\f104";
+@icon-minus: 	"\f105";
+@icon-next: 	"\f106";
+@icon-ok: 		"\f107";
+@icon-plus: 	"\f108";
+@icon-prev: 	"\f109";
+@icon-search: 	"\f10a";
+@icon-vk: 		"\f10b";
+@icon-basket: 	"\f10c";
+@icon-check: 	"\f10d";
