@@ -1,0 +1,68 @@
+.reviews-block{
+	margin-top: -5px;
+}
+.reviews-block__heading{
+	margin-bottom: 20px;
+}
+.reviews-block__form{	
+	.form-control{
+		width: 100%;
+		height: 40px;
+		margin-bottom: 20px;
+		border: 1px solid @brown;
+		transition: @transition-site;
+		box-shadow: none;
+		border-radius: 0;
+		padding: 5px 13px;
+		font-size: 14px;
+		line-height: 24px;
+		background: @white-dark;
+		&::-webkit-input-placeholder {
+			font-size: 14px;
+			line-height: 24px;
+			color: @brown;
+		}
+		&:-moz-placeholder {
+			font-size: 14px;
+			line-height: 24px;
+			color: @brown;
+		}
+		&:focus{
+			box-shadow: none;
+			border-color: @scarlet;
+			background: @white;
+			&::-webkit-input-placeholder {color: @scarlet;}
+			&:-moz-placeholder {color: @scarlet;}
+		}
+	}
+	textarea.form-control{
+		height: 100px;
+	} 
+}
+._rb__form__row{
+	margin-left: -10px;
+	margin-right: -10px;
+	.cols{
+		padding-right: 10px;
+		padding-left: 10px;
+		width: 50%;
+	}
+}
+
+._cb__search-form{
+	.btn-search{
+		background: none;
+		padding: 0;
+		border: 0;
+		outline: none;    
+		&:focus,
+		&:active{
+			outline: none;
+		} 
+	}
+	.form-control:focus + .input-group-btn .btn-search:before{
+		color: @turquoise;
+		border-color:  @turquoise;
+		border-left: 0; 
+	}
+}

@@ -2,6 +2,7 @@ $('img').addClass('img-responsive');
 $('.text-block ul').addClass('ul-site');
 var url = window.location.pathname;
 $('.navbar-nav a[href="'+url+'"]').parent().addClass('active'); 
+$('._apc__btn-block .btn-site[href="'+url+'"]').addClass('active'); 
 $('._hsi__owl').owlCarousel({
 	margin: 			0,
 	loop: 				true,
@@ -23,6 +24,19 @@ $('._ipc__action__owl').owlCarousel({
 	    },
 	   	768:{
 	        items: 	2
+	    }
+	}
+});
+$('._tpc__owl').owlCarousel({
+	margin: 		0,
+	dots: 			true,
+	nav: 			false,
+	responsive:{
+	    0:{
+	        items: 	1
+	    },
+	   	768:{
+	        items: 	3
 	    }
 	}
 });

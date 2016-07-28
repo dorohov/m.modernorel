@@ -57,7 +57,7 @@ h5{
 }
 .content-site{
 	padding: 32px 0 15px;
-	//min-height: 1000px; 
+	padding: 32px 0 25px;
 }
 .heading-site{
 	color: @b-h-color;
@@ -247,6 +247,66 @@ ol{
 		&.icon-igm:before{content: @icon-igm}
 	}
 }
+.doc-block{}
+.doc-block__item{
+	margin-bottom: 15px;
+	a{
+		font-size: 17px;
+		font-family: @din-med;
+		text-transform: uppercase; 
+		transition: @transition-site;
+		padding: 5px 0 5px 50px;
+		display: inline-block;
+		position: relative;
+		min-height: 44px;
+		&:before{
+			font-family: @icon;
+			display: block;
+			position: absolute;
+			top: 50%;
+			left: 0px;
+			transform: translateY(-50%);
+		    font-size: 34px;
+		    line-height: 34px;
+		}
+		&[href$=".doc"]{
+			&:before{
+				content: @icon-doc;
+				color: #2372ba;
+			}
+		}
+		&[href$=".docx"]{
+			&:before{
+				content: @icon-docx;
+				color: #2b5796;
+			}
+		}
+		&[href$=".rtf"]{
+			&:before{
+				content: @icon-rtf;
+				color: #01396c;
+			}
+		}
+		&[href$=".pdf"]{
+			&:before{
+				content: @icon-pdf;
+				color: #d30915;
+			}
+		}
+		&[href$=".xls"]{
+			&:before{
+				content: @icon-xls;
+				color: #6caa5c;
+			}
+		}
+		&[href$=".xlsx"]{
+			&:before{
+				content: @icon-xlsx;
+				color: #227144;
+			}
+		}
+	}
+}
 .site-search{
 	padding-top: 20px;
 	input{
@@ -294,22 +354,6 @@ ol{
 			font-size: 18px;
 		}
 	}
-}
-.consultations-block{
-	margin-left: -10px;
-	margin-right: -10px;
-	justify-content: space-between;
-	.cols{
-		padding-left: 10px;
-		padding-right: 10px;
-		&._consb__cols-cons{
-			width: 78%;
-		}
-		&._consb__cols-search{
-			width: 22%;
-			max-width: 68px;
-		}
-	} 
 }
 /*
 h3{
