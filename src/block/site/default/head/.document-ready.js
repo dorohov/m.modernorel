@@ -3,6 +3,7 @@ $('.text-block ul').addClass('ul-site');
 var url = window.location.pathname;
 $('.navbar-nav a[href="'+url+'"]').parent().addClass('active'); 
 $('._apc__btn-block .btn-site[href="'+url+'"]').addClass('active'); 
+$('._epc__btn-block .btn-site[href="'+url+'"]').addClass('active'); 
 $('._hsi__owl').owlCarousel({
 	margin: 			0,
 	loop: 				true,
@@ -27,7 +28,26 @@ $('._ipc__action__owl').owlCarousel({
 	    }
 	}
 });
-$('._tpc__owl').owlCarousel({
+$('#modal-team').on('shown.bs.modal', function (e) {
+	$('._tpc__owl').owlCarousel({
+		margin: 		0,
+		dots: 			true,
+		nav: 			false,
+		responsive:{
+		    0:{
+		        items: 	1
+		    },
+		   	768:{
+		        items: 3
+		    },
+		   	1000:{
+		        items: 	4
+		    }
+		}
+	});
+});
+
+$('._gipc__owl').owlCarousel({
 	margin: 		0,
 	dots: 			true,
 	nav: 			false,
@@ -35,8 +55,9 @@ $('._tpc__owl').owlCarousel({
 	    0:{
 	        items: 	1
 	    },
-	   	768:{
-	        items: 	3
+	   	420:{
+	        items: 	2,
+	        margin: 20,
 	    }
 	}
 });

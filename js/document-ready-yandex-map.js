@@ -27,18 +27,15 @@ $(function() {
 	//} else {
 		if($(document).width() < 768) {
 			_m_center = {
-				//center: [52.964378, 36.082256], // расположение района
-				center: [52.966000, 36.080500], // расположение района
+				center: [52.967489, 36.063430], // расположение района
 				zoom: 15,
 			}
 		} else {
 			_m_center = {
-				//center: [52.964378, 36.082256], // расположение района
-				center: [52.965000, 36.084000], // расположение района
+				center: [52.967489, 36.063430], // расположение района
 				zoom: 16,
 			}		
 		}
-	
 	
 	var myMap;
 	
@@ -48,8 +45,8 @@ $(function() {
 			searchControlProvider: 'yandex#search'
 		});
 				
-		var encom_office = new ymaps.Placemark([52.96562, 36.080339], {
-			hintContent: 'ООО «Энкомсервис»'
+		var encom_office = new ymaps.Placemark([52.967568, 36.063615], {
+			hintContent: 'Центр красоты иэстетической медицины «Модерн»'
 		}, {
 			iconLayout: 'default#image',
 			iconImageHref: '/img/default/icon-map.png',

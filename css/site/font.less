@@ -5,13 +5,19 @@
 
 @icon: 				Flaticon;
 .include-custom-font(@family: @muller, @weight: normal, @style: normal){
-	@font-face{			
+	/*@font-face{			
 		font-family: "@{family}";			
 		src:url('@{url-path-fonts}/@{family}.eot');
 		src:url('@{url-path-fonts}/@{family}.eot?#iefix') format('embedded-opentype'),
 			url('@{url-path-fonts}/@{family}.woff') format('woff'),
 			url('@{url-path-fonts}/@{family}.ttf') format('truetype'),
 			url('@{url-path-fonts}/@{family}.svg#icon') format('svg');
+		font-weight: @weight;
+		font-style: @style;		
+	}*/
+	@font-face{			
+		font-family: "@{family}";			
+		src:url('@{url-path-fonts}/@{family}.woff') format('woff');
 		font-weight: @weight;
 		font-style: @style;		
 	}

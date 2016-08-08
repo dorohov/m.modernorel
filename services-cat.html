@@ -27,7 +27,6 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
-
 <link href="/css/site.css" rel="stylesheet"> 
 	</head>
 	<body>	
@@ -38,16 +37,17 @@
 		<a class="navbar-brand" href="/"><img src="/img/default/logotip.png" alt=""></a>
 
 		<a href="tel:+74862764646" class="navbar-phone">+7 (4862) 76-46-46</a>
-		
-		<button class="c-hamburger c-hamburger--htx" data-toggle="collapse" data-target="#bs-navbar-collapse">
-        	<span>toggle menu</span>
-        </button>
+		<div class="hamburger hamburger--emphatic" data-toggle="collapse" data-target="#bs-navbar-collapse" aria-expanded="false">
+			<div class="hamburger-box">
+				<div class="hamburger-inner"></div>
+			</div>
+		</div>
 	</div>
 
 	<div class="collapse navbar-collapse" id="bs-navbar-collapse">
 		<div class="row _czr__btn-block _ppc__block">
 			<div class="cols _czr__bb__cols-cons">
-				<button type="button" class="btn-site btn-scarlet btn-next btn-consultation">Консультации</button>
+				<button type="button" class="btn-site btn-scarlet btn-next btn-consultation" data-toggle="modal" data-target="#modal-consultation">Консультации</button>
 			</div>
 			<div class="cols _czr__bb__cols-search">
 				<button type="button" class="btn-site btn-search btn-scarlet" data-toggle="collapse" data-target="#search-block"></button>
@@ -151,12 +151,53 @@
 </footer>
 
 
+		<div class="modal fade" id="modal-consultation" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body">
+				<button type="button" class="btn-site btn-close modal-btn-close" data-dismiss="modal" aria-hidden="true"></button>
+				<h4 class="modal-title">Предварительная запись</h4>				
+				<div class="reviews-block">					
+					<form class="reviews-block__form">
+						<div class="reviews-block__note">Для подтверждения заказа, с вами свяжется администратор салона. Введите контактные данные и нажмите “Отправить".</div>
+						<div><input id="author" name="author" type="text" class="form-control" placeholder="Ваше имя*"></div>
+						<div><input id="tel" name="tel" type="tel" class="form-control" placeholder="Телефон*"></div>
+						<!-- <div><span class="wpcf7-form-control-wrap date-128"><input type="date" name="date-128" value="" class="form-control wpcf7-form-control wpcf7-date"  placeholder="Желаемое время посещения*"/> </span></div> -->
+						<div>
+							<label for="date-128">Желаемое время посещения*</label>
+							<input type="date" name="date-128" value="" class="form-control" placeholder="Желаемое время посещения*"/></div>
+						<div class="row _rb__form__row">
+							<div class="cols">
+								<input id="captcha_code" name="captcha_code" type="text" class="form-control" placeholder="Код безопасности*">
+							</div>
+							<div class="cols">
+								<img src="http://modernorel.ru/wp-content/plugins/captcha-code-authentication/captcha_code_file.php?rand=718296546">
+							</div>
+						</div>
+						<div>
+							<textarea id="comment" class="form-control" name="comment" placeholder="Ваш комментарий"></textarea>
+						</div>
+						<div>
+							<button type="submit" class="btn-site btn-scarlet btn-next btn-consultation">Отправить</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+		
+			
+
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
 	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 
+<!-- <link rel="stylesheet" type="text/css" href="/plugins/hamburgers/hamburgers.min.css" /> -->
 <link rel="stylesheet" type="text/css" href="/plugins/fancybox/source/jquery.fancybox.css" media="screen" />
 <link rel="stylesheet" type="text/css" href="/plugins/fancybox/source/helpers/jquery.fancybox-buttons.css" />
 
@@ -168,10 +209,23 @@
 <script src="/js/moment/moment.min.js" ></script>
 <script src="/plugins/owl.carousel/owl.carousel.min.js"></script> 
 <script src="/js/document-ready.js" ></script>
+<script src="/js/jquery.touchSwipe.min.js" ></script>
 		
 <script src="/plugins/fancybox/lib/jquery.mousewheel-3.0.6.pack.min.js"></script>
 <script src="/plugins/fancybox/source/jquery.fancybox.min.js"></script>
 <script src="/plugins/fancybox/source/helpers/jquery.fancybox-buttons.min.js"></script>
+
+
+<!-- <link rel='stylesheet' id='jquery-ui-theme-css'  href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.min.css?ver=1.11.4' type='text/css' media='all' />
+<link rel='stylesheet' href='http://modernorel.ru/wp-content/plugins/contact-form-7-datepicker/js/jquery-ui-timepicker/jquery-ui-timepicker-addon.min.css?ver=4.2.9' type='text/css' media='all' />
+
+<script src='http://modernorel.ru/wp-includes/js/jquery/ui/datepicker.min.js?ver=1.11.4'></script>
+<script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/i18n/datepicker-ru.min.js?ver=1.11.4'></script> -->
+<script>/*
+jQuery(function($){
+	$('input[name="date-128"]').datepicker({"dateFormat":"mm/dd/yy","firstDay":1,"changeMonth":true,"showButtonPanel":true,"controlType":"slider","addSliderAccess":true,"sliderAccessArgs":{"touchonly":true},"stepHour":1,"stepMinute":1,"stepSecond":1}).datepicker('option', $.datepicker.regional['ru']).datepicker('option', 'minDate', "").datepicker('option', 'maxDate', "").datepicker('refresh');
+});**/
+</script>
 		
 	</body>
 </html> 
