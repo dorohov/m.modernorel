@@ -28,8 +28,8 @@ $('._ipc__action__owl').owlCarousel({
 	    }
 	}
 });
-$('#modal-team').on('shown.bs.modal', function (e) {
-	$('._tpc__owl').owlCarousel({
+$(".modal-team").on("shown.bs.modal", function(e) {
+	$(this).find("._tpc__owl").owlCarousel({
 		margin: 		0,
 		dots: 			true,
 		nav: 			false,
@@ -45,8 +45,8 @@ $('#modal-team').on('shown.bs.modal', function (e) {
 		    }
 		}
 	});
+    $(window).trigger('resize');
 });
-
 $('._gipc__owl').owlCarousel({
 	margin: 		0,
 	dots: 			true,
