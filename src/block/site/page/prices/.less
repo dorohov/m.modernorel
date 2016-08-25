@@ -127,3 +127,52 @@
 ._ppc__controls{
 	float: right;
 }
+.items-list{
+	ul{
+		list-style: none;
+		margin: 0 -25px 0 -30px;
+		padding: 0;
+		li{
+			margin: 0;
+			padding: 13px 10px 13px 15px;
+			display: flex;
+			align-items: center;
+			&:nth-child(2n){
+				background: #ffead6;				
+			}
+			a{
+				text-decoration: none!important;
+				width: 70%;
+				padding-right: 10px;
+				position: relative;
+				padding-left: 40px;
+				&:before{
+					position: absolute;
+					top: 50%;
+					left: 0;
+					transform: translateY(-50%);
+					font-family: @icon;
+					content: @icon-minus;
+					display: block;
+			    	font-size: 12px;
+			    	border: 1px solid;
+			    	border-radius: 50%;
+			    	width: 26px;
+			    	line-height: 24px;
+			    	text-align: center;
+			    	color: @brown-light;
+				}
+				&:hover{
+					&:before{
+						color: @scarlet;
+					}
+				}
+			}
+			div{
+				font-family: @helv-bold;
+				width: 30%;
+				font-size: 12px;
+			}
+		}
+	}
+}
